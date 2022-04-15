@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import s from './Form.module.css';
+import PropTypes from 'prop-types';
 class Form extends Component {
   state = {
     name: '',
     number: '',
-    filter: '',
   };
 
   handleSubmit = e => {
@@ -63,4 +63,7 @@ class Form extends Component {
   }
 }
 
+Form.propTypes = {
+  onFormSubmit: PropTypes.func.isRequired,
+};
 export default Form;
